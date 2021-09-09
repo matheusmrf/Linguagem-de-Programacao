@@ -1,16 +1,17 @@
-# Nome: Bruno Pena e Matheus Rangel
+# Nome: Bruno Pena Baeta e Matheus Rangel de Figueiredo
 # Professor: Hugo Bastos de Paula
 # Matéria: Linguagens de Programação
 
 from lib.interface import *
-from cadastro import *
 from lib.arquivo import *
 from time import sleep
+
 
 ########################################### Funcao 1 ######################################################
 
 def func1():
     # Formulário do produto
+    global preco, qtde, menor
     nome = input('Digite o nome do produto (string): ')
     t = True
     while t:
@@ -55,11 +56,13 @@ def func1():
     Pode ser consumido por menores de idade? {produto["menor"]}
   """)
 
+
 ########################################### Funçao 2 ######################################################
 
 
 # Declarando o vetor de Fibonacci
 sequencia = []
+
 
 # Função recursiva que é chamada pela Função 2 e imprime a sequência de Fibonacci
 def fibonacci(contador, n1, n2):
@@ -69,7 +72,8 @@ def fibonacci(contador, n1, n2):
         sequencia.append(n1 + n2)
     return fibonacci(contador - 1, n2, n1 + n2)
 
-#FUNÇÃO 2: Função que apresenta a sequencia de Fibonacci usando recursividade e vetores
+
+# FUNÇÃO 2: Função que apresenta a sequencia de Fibonacci usando recursividade e vetores
 def func2():
     q = int(input('Digite a quantidade de termos que deverão aparecer na sequência: '))
     if q < 1:
@@ -82,8 +86,37 @@ def func2():
     else:
         sequencia.append(1)
         sequencia.append(1)
-        fibonacci(q-2, 1, 1)
+        fibonacci(q - 2, 1, 1)
     print(sequencia)
+
+########################################### Funçao 3 ######################################################
+
+def func3():
+    arq = 'cadastros.txt'
+
+    if not arquivoExiste(arq):
+        criarArquivo(arq)
+
+    while True:
+        resposta = menu(['Cadastrar Pessoas', 'Listar Pessoas Cadastradas', 'Voltar para o menu principal'])
+        if resposta == 1:
+            # Opcao de cadastrar
+            cabecalho('Novo Cadastro')
+            nome = str(input('Digite seu nome: '))
+            idade = leiaInt('Digite sua idade: ')
+            sexo = input('Digite seu sexo (m/f): ')
+            email = input("Digite seu email: ")
+            cadastrar(arq, nome, idade, sexo, email)
+        elif resposta == 2:
+            lerArquivo(arq)
+        elif resposta == 3:
+            cabecalho('Voltando para o menu principal... ')
+            break
+        else:
+            print('\033[31mErro! Digite uma opcao válida.\033[m')
+        sleep(2)
+
+
 
 ########################################### MENU ######################################################
 
@@ -100,7 +133,9 @@ while True:
     elif resposta == 2:
         func2()
     elif resposta == 3:
-        cabecalho('Voltando para o menu principal... ')
+        func3()
+    elif resposta == 4:
+        cabecalho('Encerrando o programa. ')
         break
     else:
         print('\033[31mErro! Digite uma opcao válida.\033[m')
