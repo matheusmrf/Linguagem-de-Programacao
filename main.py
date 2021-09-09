@@ -118,7 +118,7 @@ def func3():
 
 
 
-########################################### MENU ######################################################
+########################################### MENU PRINCIPAL ######################################################
 
 while True:
     resposta = menu(['Funcao de criar produto (tipos de dados e dicionários', 'Função recursiva que apresenta a '
