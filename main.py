@@ -52,7 +52,7 @@ def func1():
     print(f"""Produto criado:
     Nome: {produto["nome"]}
     Quantidade no estoque: {produto["qtde"]}
-    Preço: {produto["preco"]}
+    Preço: R${produto["preco"]}
     Pode ser consumido por menores de idade? {produto["menor"]}
   """)
 
@@ -121,7 +121,7 @@ def func3():
 ########################################### MENU PRINCIPAL ######################################################
 
 while True:
-    resposta = menu(['Funcao de criar produto (tipos de dados e dicionários', 'Função recursiva que apresenta a '
+    resposta = menu(['Funcao de criar produto (tipos de dados e dicionários)', 'Função recursiva que apresenta a '
                                                                               'sequencia de Fibonacci (recursividade '
                                                                               'e vetores)', 'Função para cadastrar '
                                                                                             'clientes em um arquivo '
