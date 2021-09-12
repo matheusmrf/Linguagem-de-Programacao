@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}  
+\sloppy
+\title{Trabalho sobre Sintaxe e Semântica\\ Linguagems de Programação}
+\author{Bruno P. Baeta\inst{1}, Davi D. Magalhães\inst{2}, Matheus R. Figueiredo\inst{3} }
+\address
+{
+Instituto de Ciências Exatas e de Informática \\ PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS (PUCMG)\\
+Belo Horizonte -- MG -- Brazil
+}
+\begin{document} 
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%English Introduction%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+This documentation contains the presentation of the programming language's syntax and semantics work  made in \LaTeX for Python. This document contains several explanations and examples of how the language is used. The topics syntax, typing, memory allocation, concurrency and others are covered in the document, the record aims to show that by knowing the semantic structures that define the behavior of programming languages, the reader can easily learn any unknown programming language in a short time, in different programming paradigms and models.
+\\\textbf{\keyword{Key words: }}\LaTeX. Python.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%English Introduction%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%Introdução%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{resumo} 
+Esta documentação contem a apresentação do Trabalho sobre Sintaxe e Semântica de Linguagens de Programação feita em \LaTeX para linguagem python. Esse documento contem diversas explicações e exemplos de como a linguagem é utilizada. Os tópicos sintaxe, tipagem, alocação de memória, concorrência e outros são abordados no documento, o registro tem o objetivo de mostrar que ao conhecer as estruturas semânticas que definem o comportamento das linguagens de programação, o leitor tenha facilidade para aprender qualquer linguagem de programação desconhecida em pouco tempo, em diversos paradigmas e modelos de programação.
+  \\\textbf{\keyword{Palavras-chave: }}\LaTeX. Python.
+\end{resumo}
+
+%%%%%%%%%%%%%%%%%%%%%Introdução%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%Paradigmas%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Paradigmas}
+Phyton é uma linguagem de alto nível multiparadigma que suporta o paradigma orientada a objetos, imperativo, funcional e procedural.
+
+
+\subsection{Programação orientada a objetos (POO) }
+Na programação orientada à objetos o foco é na criação de objetos que contem tanto os dados quanto as funcionalidades. Em geral, a definição de cada objeto corresponde a algum objeto ou conceito no mundo real e as funções que operam sobre tal objeto correspondem as formas que os objetos reais interagem.
+
+
+\subsection{Imperativo}
+
+O nome do paradigma, Imperativo, está ligado ao tempo verbal imperativo, onde o programador diz ao computador: faça isso, depois isso, depois aquilo... Este paradigma de programação se destaca pela simplicidade, uma vez que todo ser humano, ao se programar, o faz imperativamente, baseado na ideia de ações e estados, quase como um programa de computador.
+O fundamento da programação imperativa é o conceito de Máquina de Turing, que nada mais é que uma abstração matemática que corresponde ao conjunto de funções computáveis.
+
+\subsection{Funcional}
+
+Trata a computação como uma avaliação de funções matemáticas e que evita estados ou dados mutáveis. Ela enfatiza a aplicação de funções, em contraste da programação imperativa, que enfatiza mudanças no estado do programa. Enfatizando as expressões ao invés de comandos, as expressões são utilizados para cálculo de valores com dados imutáveis. Também trata as funções de forma em que estas possam ser passadas como parâmetro e valores para outras e funções e podendo ter o resultado armazenado em uma constante.
+
+\subsection{Procedural}
+Na programação procedural o foco é na escrita de funções ou procedimentos que operam sobre os dados. O termo Programação procedural (ou programação procedimental) é às vezes utilizado como sinônimo de Programação imperativa, mas pode se referir a um paradigma de programação baseado no conceito de chamadas a procedimento. Os Procedimentos, também conhecidos como rotinas, subrotinas, métodos, ou funções (que não devem ser confundidas com funções matemáticas, mas são similares àquelas usadas na programação funcional) simplesmente contêm um conjunto de passos computacionais a serem executados. Um dado procedimento pode ser chamado a qualquer hora durante a execução de um programa, inclusive por outros procedimentos ou por si mesmo.
+
+%%%%%%%%%%%%%%%%%%%%%Paradigmas%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%Domínios de aplicação%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Domínios de aplicação}
+
+Python é uma linguagem Open-Source de propósito geral usado bastante em data science, machine learning, desenvolvimento de web, desenvolvimento de aplicativos, automação de scripts, fintechs e mais.
+
+
+\subsection{Data Science}
+
+Data science é a prática de extrair informação e Insights através de dados. Nesse caso, data science inclui o machine learning, visualização de dados e análise de dados.
+
+\subsection{Machine Learning}
+
+Machine Learning (ML) é uma aplicação da inteligência artificial (IA) onde máquinas aprendem através programas sem estarem explicitamente programados. Em essência, machine learning permite computadores se programarem. Exemplos de ML incluem:
+
+Sistemas recomendadores – Por exemplo, quando o Netflix ou Youtube faz recomendações baseadas no seu histórico.\\
+
+Sistemas de reconhecimento de imagem – Por exemplo, podem reconhecer se uma imagem é um cachorro ou um gato, como no popular Not Hotdog app da série de TV Silicon Valley, ou Face ID da Apple que reconhece a pessoa e desbloqueia o seu celular.
+
+\subsection{Desenvolvimento Web}
+
+Desenvolvimento Web inclui todas as atividades usadas para criar websites e aplicativos web-based. Existem duas partes em um Website – Client-side que no qual o código roda no browser do computador do usuário; e a Server-side, onde o código roda no servidor da web. Desenvolvedores Python podem usar frameworks da própria Web para rapidamente e eficientemente construir aplicações dinâmicas da web, sem precisar ter que aprender uma linguagem client-side como o JavaScript. Frameworks reduzem significantemente o tempo de desenvolvimento através de automatização de tarefas da web comuns. A facilidade de uso e popularidade do Python para Desenvolvimento Web é umas das razões que empresas como Ideamotive se especializa em contratar e conectar empresas com talentosos web developers de Python.
+
+\subsection{Desenvolvimento de Aplicativos}
+
+Considerando que o Python é feito para que tenha menos tempo de desenvolvimento e esforço,  é ótimo para protótipos. Por causa de sua robustez, escalabilidade, velocidade, e versatilidade, Python é ótimo para projetos de escala empresarial. O Python também vem com API de banco de dados, que no qual permite uma fácil conexão com Base de dados como MySQL, Oracle, PostgreSQL, MS SQL Server, etc. O “interfacing” do Python para linguagens como C e Java Via Cython e Jython também permite desenvolvedores trazer funcionalidades de outras linguagens em uma aplicação do Python.
+
+\subsection{Automação de Scripts}
+
+Python é mais utilizado é no Scripting. Scripting significa criar pequenos programas que fazem certas tarefas automaticamente. O Python é ideal para isso porque foi feito para ser fácil e rápido de programar.
+
+
+%%%%%%%%%%%%%%%%%%%%%Dominios de aplicação%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%Concorrência%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Concorrência e Paralelismo}
+
+Python não foi originalmente projetada com foco em programação concorrente, muito menos paralela. O modo tradicional de programar concorrência em Python -- threads -- é limitado no interpretador padrão (CPython) por uma trava global (a GIL) que impede a execução paralela de threads escritas em Python. Isso significa que threads em Python são úteis apenas em aplicações I/O bound -- onde o gargalo está no I/O, como é o caso de aplicações na Internet.\\
+A GIL impede qualquer paralelismo no código escrito em Python, mas as funcionalidades da plataforma (interpretador, bibliotecas, API do sistema operacional) não são limitadas pela GIL. Todas as chamadas da biblioteca padrão de Python que fazem I/O de rede ou arquivos liberam a GIL. Portanto, em qualquer processamento onde o limitante é o I/O (I/O bound) o uso de threads em Python pode acelerar muito o processamento em relação a uma solução sequencial que vai passar a maior parte do tempo aguardando I/O. Mas para processamentos limitados pela CPU (CPU bound) usar threads em Python atrapalha mais do que ajuda. Importante notar que bibliotecas externas escritas em C para uso com Python podem liberar a GIL, e podem usar threads nativas executando em paralelo.
+
+%%%%%%%%%%%%%%%%%%%%Concorrência%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%Sintaxe%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sintaxe }
+É o conjunto de regras que definem como um programa em Python será escrito e interpretado (tanto pelo sistema de tempo de execução como pelo ser humano). Python foi concebido para ser uma linguagem altamente legível. Ela possui um layout visual relativamente organizado e usa palavras em Inglês com freqüência, quando outras linguagens usam pontuação. Também objetiva a simplicidade e generalidade na concepção da sua sintaxe.
+
+\subsection{Variáveis}
+Uma variável não pode ser utilizada em uma expressão sem ter sido inicializada e não existe “criação automática” de variáveis. Se a variável não for inicializada o erro "name 'NOME DA VARIAVEL' is not defined será exibido."
+
+
+\subsection{Ausência do " ; "}
+
+A ausência do " ; " em python deve-se ao fato que a linguagem funciona a base de indentação do código, ou seja, o espaçamento ao final da linha define o fim do código.
+
+\subsection{Concatenando Strings}
+
+Em python usa-se o sinal " + " para concatenar strings, e quando concatenado com um número é necessária fazer a conversão.
+
+%%%%%%%%%%%%%%%%%%%%%Sintaxe%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%Tipagem%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tipagem}
+
+Python é uma linguagem de tipagem forte e dinâmica, não é preciso em momento algum definir o tipo do dado. O Python detecta automáticamente o tipo da variável e atribui o tipo à mesma, na declaração da variável não é necessário explicitar seu tipo.
+
+\subsection{Dinamicamente Tipada}
+
+Significa que o próprio interpretador do Python infere o tipo dos dados que uma variável recebe, sem a necessidade que o usuário da linguagem diga de que tipo determinada variável é. É possível alterar o tipo da variável apenas atribuindo um novo valor a ela.
+
+\subsection{Fortemente Tipada}
+
+Linguagens de tipagem fraca, permitem que você faça operações sem a necessidade da realização do cast. Tipagem forte significa que o interpretador do Python avalia as expressões (evaluate) e não faz coerções automáticas entre tipos não compatíveis (conversões de valores).
+
+%%%%%%%%%%%%%%%%%%%%%Tipagem%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%Estruturas da linguagem%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Estruturas da linguagem}
+
+Como visto acima, Python usa indentação como delimitação de bloco.
+Abaixo vemos alguns dos comandos padrões que aceitam blocos:
+\\\\
+\textbf{if/elif/else} - Estruturas condicionais da linguagem\\
+\\
+\textbf{for/while/else}- Estruturas de repetição\\
+\\
+\textbf{def}- Estrutura de definição de funções\\
+\\
+\textbf{try/except /finally/else}- Tratamento de exceções\\
+\\
+\textbf{class}- Estrutura de definição de classes
+
+
+%%%%%%%%%%%%%%%%%%%%Estruturas da linguagem%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%Alocação de memória%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Alocação de memória e Garbage Colector}
+
+Python tem um alocador de objetos, o qual é responsável pela alocação de memória dentro da área de objetos. Ele é chamado cada vez que um novo objeto necessita ser alocado, ou quando um objeto que não é mais utilizado necessita ser desalocado.
+\\\\
+O garbage colector está monitorando todos os objetos na memória. Um novo objeto começa sua vida na primeira geração do garbage colector. Se python executa um processo de garbage colector em uma geração e um objeto sobrevive, ele passa para uma segunda geração mais antiga. Em python o garbage colector tem três gerações no total, e um objeto passa para uma geração mais antiga sempre que sobrevive a um processo de garbage colector em sua geração atual.
+
+
+%%%%%%%%%%%%%%%%%%%%Alocação de memória%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%Referencias%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{References}
+
+USP, Classes e objetos - Fundamentos \\
+Wikipedia\\
+Garoa Hackers Club\\
+Readthedocs\\
+Python para desenvolvedores 2.a edição. Autor: Luiz Eduardo Borges\\
+Harve\\
+DevFuria\\
+Stackify
+
+%%%%%%%%%%%%%%%%%%%%Referencias%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

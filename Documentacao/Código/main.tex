@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}  
+\sloppy
+\title{Trabalho sobre Sintaxe e Semântica\\ Linguagems de Programação: Documentação do programa}
+\author{Bruno P. Baeta\inst{1}, Davi D. Magalhães\inst{2}, Matheus R. Figueiredo\inst{3} }
+\address
+{
+Instituto de Ciências Exatas e de Informática \\ PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS (PUCMG)\\
+Belo Horizonte -- MG -- Brazil
+}
+\begin{document} 
+\maketitle
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%Introdução%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{resumo} 
+Esta documentação tem como objetivo explicar o funcionamento do programa feito para o Trabalho de Sintaxe e Semântica da matéria de Linguagens de Programação do Professor Hugo Bastos de Paula.
+  \\\textbf{\keyword{Palavras-chave: }}\LaTeX. Python.
+\end{resumo}
+
+%%%%%%%%%%%%%%%%%%%%%Introdução%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%Menu%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Menu}
+O programa começa pelo menu, que está no arquivo "main.py" que, ao ser compilado, apresenta uma simples interface que nos fornece 4 opções: \\
+1- \ Função de criar produto (tipos de dados e dicionários) \\
+2- \ Função recursiva que apresenta a sequencia de Fibonacci (recursividade e vetores) \\
+3- \ Função para cadastrar clientes em um arquivo externo (manipulação de arquivos) \\
+4- \ Sair do Sistema \\
+\\
+Cada opção (com exceção da 4ª) chama uma função diferente que será explicado nos próximos tópicos.\\
+O menu exemplifica o uso de estruturas de repetição (while) e condicionais (if), além de entrada (input) e saída de dados (print) em Python.
+
+%%%%%%%%%%%%%%%%%%%%%Menu%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%Função 1%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Função 1}
+A função 1, definida no código como "func1()", declara variáveis globais que armazenarão dados que serão pedidos ao usuário.\\
+Os dados pedidos estão relacionados ao cadastro de um produto. Cada dado pedido é de um tipo diferente. Sendo eles string (nome do produto), int (quantidade desse produto no estoque), float (preço do produto) e boolean (se o produto pode ou não ser consumido por menores de idade). Todos os dados são testado para saber se são do tipo correto.\\
+Após a entrada de dados pelo usuário, o valor das variáveis é armazenado em um dicionário chamado "produto", que, então, é impresso na tela.\\
+Essa função consegue exemplificar muito bem o uso de tipos de dados e dicionários em Python.
+
+
+%%%%%%%%%%%%%%%%%%%%%Função 1%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%Função 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Função 2}
+A função 2, definida no código como "func2()", apresenta a sequência de Fibonacci de forma recursiva. Primeiramente a função pergunta ao usuário quantos termos deverão aparecer na sequência e armazena a resposta em uma variável, e então chama uma função recursiva fibonacci() e passa essa variável por parâmetro. A função fibonacci() armazena os valores da sequência de fibonacci em uma lista global previamente declarada. A cada chamada recursiva da função ela passa a variável reduzida de 1 unidade, quando chegar a 0 as chamadas se encerram e então o vetor global é impresso na tela.\\
+Essa função consegue exemplificar muito bem o uso de listas e funções recursivas em Python.
+%%%%%%%%%%%%%%%%%%%%Função 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%Biblioteca%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bibliotecas}
+No programa, foi criado uma biblioteca para que fosse armazenado funções úteis para ser utilizado no programa. 
+Foram criados dois pacotes dentro da pasta 'lib', sendo eles:
+
+\subsection{Interface}
+No pacote de Interface, foi utilizado para armazenar funções para a leitura de números inteiros (leiaInt) para auxiliar em uma das entrada de dados na "func3".
+Também foi criado 3 funções para auxiliar na criação do menu do programa, sendo elas: linha, cabeçalho e menu.
+
+
+\subsection{Arquivo}
+No pacote de Arquivo, foi utilizado para funções para serem chamadas no programa principal, para que assim se economizasse linhas e sendo assim mais funcional.
+Para isso, foi criado as funções:
+
+\textbullet arquivoExiste: Faz uma consulta para ver se o arquivo existe, tentando verificar se o arquivo, caso retorne o erro FileNotFoundError, ele retornará um boolean.
+
+\textbullet criarArquivo: Ele tenta abrir o arquivo passando o parâmetro com o nome do arquivo e de Write+Text.
+
+\textbullet cadastrar: Ele recebe os parâmetros que são declarados no programa e escreve no arquivo criado.
+
+\textbullet lerArquivo: Ele tenta ler o arquivo com o parâmetro de Read+Text, caso retorne uma exceção ele retorna um erro, caso não, ele para cada linha do arquivo, lê e separa eles.
+%%%%%%%%%%%%%%%%%%%%Biblioteca%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%Função 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Função 3}
+A função 3, definida no código como "func3()", são chamados métodos do pacote de arquivos da biblioteca para auxiliar na verificação se o arquivo já existe, caso não, ele criará um. Também é declarado um menu para o usuário escolher entre cadastrar uma pessoa, listar as pessoas cadastradas e uma opção para o usuário voltar para o menu principal do programa.
+
+%%%%%%%%%%%%%%%%%%%%%Função 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
