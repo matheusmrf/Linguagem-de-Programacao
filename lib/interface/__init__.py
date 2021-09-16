@@ -1,3 +1,4 @@
+# Função que verifica se a entrada de dados no menu é do tipo Int
 def leiaInt(msg):
     while True:
         try:
@@ -11,15 +12,17 @@ def leiaInt(msg):
         else:
             return n
 
+# Função que ajuda na formatação do menu
+def linha():
+    return '-' * 42
 
-def linha(tam = 42):
-    return '-' * tam
-
+# Função que gera o cabeçalho do menu
 def cabecalho(txt):
     print(linha())
     print(txt.center(42))
     print(linha())
 
+# Função que gera o menu (recebe como parâmetro uma lista de itens do menu)
 def menu(lista):
     cabecalho('Menu')
     c = 1
